@@ -52,6 +52,17 @@ const HomeSecondGraphic = styled.div`
       width: 122px;
     }
   }
+  @media (max-width: 945px) {
+    width: 689px;
+    margin-inline: auto;
+  }
+  @media (max-width: 689px) {
+    width: 500px;
+  }
+  @media (max-width: 414px) {
+    width: 327px;
+    height: 250px;
+  }
 `;
 
 function HomeSecondGraphicComponent() {

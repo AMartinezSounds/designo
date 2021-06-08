@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import Nav from './Nav';
-import Footer from './Footer';
 import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 import MobileNav from './MobileNav';
-import GetInTouch from './GetInTouch';
+import FooterBundle from './FooterBundle';
 
 function Layout({ children }) {
   const [crossButton, setCrossButton] = useState('false');
@@ -14,8 +13,7 @@ function Layout({ children }) {
       <Nav setCrossButton={setCrossButton} crossButton={crossButton} />
       <MobileNav crossButton={crossButton} />
       {children}
-      {/* <GetInTouch /> */}
-      <Footer />
+      <FooterBundle />
     </>
   );
 }

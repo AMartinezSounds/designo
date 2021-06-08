@@ -25,18 +25,38 @@ const NavStyles = styled.nav`
 
   li {
     margin-left: 2.5rem;
+    position: relative;
+  }
+  li::after {
+    content: '';
+    position: absolute;
+    background: black;
+    height: 1px;
+    width: 0;
+    top: 18px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  li:hover {
+    &:first-child::after {
+      width: 122px;
+    }
+    &:nth-child(2)::after {
+      width: 95px;
+    }
+    &:nth-child(3)::after {
+      width: 80px;
+    }
   }
 
-  a:hover {
-    border-bottom: 1px solid black;
-  }
   .logo:hover {
     border-bottom: none;
   }
 
-  /* @media (max-width: 644px) {
-    
-  } */
+  @media (max-width: 664px) {
+    font-size: 1.5rem;
+  }
+
   @media (max-width: 643px) {
     margin-inline: 3rem;
     ul {
@@ -49,6 +69,10 @@ const NavStyles = styled.nav`
     button {
       display: initial;
     }
+  }
+  @media (max-width: 414px) {
+    max-width: 414px;
+    margin-inline: auto;
   }
 `;
 
@@ -64,6 +88,7 @@ const IconStyles = styled.div`
   display: none;
   @media (max-width: 643px) {
     display: initial;
+    color: black;
   }
 `;
 

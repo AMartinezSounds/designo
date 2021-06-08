@@ -7,7 +7,6 @@ const HomeSecondAppStyles = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-color: black;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -51,6 +50,19 @@ const HomeSecondAppStyles = styled.div`
     p::after {
       width: 122px;
     }
+  }
+  @media (max-width: 945px) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 689px;
+    margin-inline: auto;
+  }
+  @media (max-width: 689px) {
+    width: 500px;
+  }
+  @media (max-width: 414px) {
+    width: 327px;
+    height: 250px;
   }
 `;
 

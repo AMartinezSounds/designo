@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import facebookIcon from '../../public/static/icons/icon-facebook.svg';
 import youtubeIcon from '../../public/static/icons/icon-youtube.svg';
 import twitterIcon from '../../public/static/icons/icon-twitter.svg';
@@ -11,13 +12,14 @@ const FooterInfoStyles = styled.div`
   align-items: flex-end;
   justify-content: space-between;
   font-size: 1.6rem;
+
   p {
     color: rgb(128, 128, 128);
   }
   img {
     margin-left: 2rem;
   }
-  @media (max-width: 680px) {
+  @media (max-width: 700px) {
     flex-direction: column;
     align-items: center;
     p {
@@ -29,19 +31,13 @@ const FooterInfoStyles = styled.div`
 const LocationInfoStyles = styled.div``;
 const ContactInfoStyles = styled.div``;
 const SocialMediaStyles = styled.div`
-  @media (max-width: 680px) {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    a {
-      margin-inline: 1rem;
-    }
-    img {
-      margin-left: 0;
-    }
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
-
 function ContactInfo() {
   return (
     <FooterInfoStyles>

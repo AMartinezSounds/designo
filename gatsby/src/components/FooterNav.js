@@ -21,13 +21,34 @@ const FooterNavStyles = styled.nav`
   a {
     color: white;
   }
-  a:hover {
-    border-bottom: 1px solid white;
+  li {
+    position: relative;
+  }
+  li::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 1px;
+    width: 0;
+    top: 18px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  li:hover {
+    &:first-child::after {
+      width: 122px;
+    }
+    &:nth-child(2)::after {
+      width: 95px;
+    }
+    &:nth-child(3)::after {
+      width: 80px;
+    }
   }
   .logo:hover {
     border-bottom: none;
   }
-  @media (max-width: 680px) {
+  @media (max-width: 700px) {
     flex-direction: column;
     max-width: none;
   }
@@ -41,7 +62,7 @@ const NavBarLinks = styled.div`
       margin-left: 2.5rem;
     }
   }
-  @media (max-width: 680px) {
+  @media (max-width: 700px) {
     width: 100%;
     ul {
       border-top: 1px solid rgba(128, 128, 128, 0.4);

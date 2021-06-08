@@ -21,8 +21,9 @@ const GlobalStyles = createGlobalStyle`
     }
     p {
         font-size: 1.5rem;
+        font-weight: 200;
     }
-    button {
+    .button {
         font-size: 1.6rem;
         text-transform: uppercase;
         height: 56px;
@@ -30,6 +31,16 @@ const GlobalStyles = createGlobalStyle`
         background-color: white;
         border-radius: 5px;
         border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .button:hover{
+        background-color: #FFAD9B; 
+        color: white;
+        
     }
 `;
 
