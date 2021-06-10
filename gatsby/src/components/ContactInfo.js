@@ -8,14 +8,17 @@ import pinterestIcon from '../../public/static/icons/icon-pinterest.svg';
 import instagramIcon from '../../public/static/icons/icon-instagram.svg';
 
 const FooterInfoStyles = styled.div`
+  color: rgb(128, 128, 128);
+  height: 60%;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  font-size: 1.6rem;
-
-  p {
-    color: rgb(128, 128, 128);
+  @media (min-width: 769px) {
+    flex-direction: row;
   }
+  /* 
+
   img {
     margin-left: 2rem;
   }
@@ -25,17 +28,49 @@ const FooterInfoStyles = styled.div`
     p {
       text-align: center;
     }
-  }
+  } */
 `;
 
-const LocationInfoStyles = styled.div``;
-const ContactInfoStyles = styled.div``;
+const LocationInfoStyles = styled.div`
+  height: 20%;
+  text-align: center;
+  @media (min-width: 769px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 30%;
+    text-align: left;
+  }
+`;
+const ContactInfoStyles = styled.div`
+  height: 20%;
+  text-align: center;
+  @media (min-width: 769px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 30%;
+    text-align: left;
+  }
+`;
 const SocialMediaStyles = styled.div`
+  height: 20%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  height: 4rem;
-  @media (max-width: 700px) {
-    display: none;
+  justify-content: center;
+  align-items: flex-end;
+  a {
+    margin-inline: 0.5rem;
+  }
+  @media (min-width: 769px) {
+    height: 100%;
+    justify-content: flex-end;
+    width: 40%;
+    a {
+      padding-bottom: 0.5rem;
+    }
   }
 `;
 function ContactInfo() {

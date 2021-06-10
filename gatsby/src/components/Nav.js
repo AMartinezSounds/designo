@@ -6,77 +6,55 @@ import { FaTimes } from 'react-icons/fa';
 import logo from '../../public/static/logo-dark.png';
 
 const NavStyles = styled.nav`
-  width: min(90%, 1111px);
-  height: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-inline: auto;
-  font-size: max(1rem, 1.6rem);
-  font-weight: 300;
-
-  ul {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: min(370px, 40%);
-  }
-
+  width: 89.6%;
+  height: 11.47vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   li {
-    margin-left: 2.5rem;
-    position: relative;
+    display: none;
   }
-  li::after {
-    content: '';
-    position: absolute;
-    background: black;
-    height: 1px;
-    width: 0;
-    top: 18px;
-    left: 0;
-    transition: width 0.3s ease;
-  }
-  li:hover {
-    &:first-child::after {
-      width: 122px;
-    }
-    &:nth-child(2)::after {
-      width: 95px;
-    }
-    &:nth-child(3)::after {
-      width: 80px;
-    }
-  }
-
-  .logo:hover {
-    border-bottom: none;
-  }
-
-  @media (max-width: 664px) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 643px) {
-    margin-inline: 3rem;
+  @media (min-width: 769px) {
     ul {
-      flex: 0;
-      width: 150px;
+      min-width: 370px;
+      display: flex;
+      justify-content: space-between;
     }
     li {
-      display: none;
+      display: inline;
+      position: relative;
     }
-    button {
-      display: initial;
+    li::after {
+      content: '';
+      position: absolute;
+      background: black;
+      height: 1px;
+      width: 0;
+      top: 18px;
+      left: 0;
+      transition: width 0.3s ease;
     }
-  }
-  @media (max-width: 414px) {
-    max-width: 414px;
-    margin-inline: auto;
+    li:hover {
+      &:first-child::after {
+        width: 113px;
+      }
+      &:nth-child(2)::after {
+        width: 88px;
+      }
+      &:nth-child(3)::after {
+        width: 75px;
+      }
+    }
   }
 `;
 
 const LogoStyles = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0.3rem;
   img {
     width: 202.27px;
     height: 27px;
@@ -84,10 +62,12 @@ const LogoStyles = styled.div`
 `;
 
 const IconStyles = styled.div`
-  font-size: 3rem;
+  cursor: pointer;
+  font-size: 2rem;
   display: none;
-  @media (max-width: 643px) {
-    display: initial;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
     color: black;
   }
 `;

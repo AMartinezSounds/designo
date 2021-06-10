@@ -3,17 +3,18 @@ import styled from 'styled-components';
 import bg from '../../public/static/home/backgrounds/image-graphic-design.jpg';
 
 const HomeSecondGraphic = styled.div`
+  height: 250px;
+  width: 100%;
+  border-radius: 20px;
   background: url(${bg});
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-color: black;
-  border-radius: 20px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative;
+  justify-content: center;
   &::before {
     content: '';
     position: absolute;
@@ -26,7 +27,7 @@ const HomeSecondGraphic = styled.div`
     transition: background 0.3s ease;
   }
   h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     z-index: 2;
   }
   p {
@@ -52,16 +53,9 @@ const HomeSecondGraphic = styled.div`
       width: 122px;
     }
   }
-  @media (max-width: 945px) {
-    width: 689px;
-    margin-inline: auto;
-  }
-  @media (max-width: 689px) {
-    width: 500px;
-  }
-  @media (max-width: 414px) {
-    width: 327px;
-    height: 250px;
+  @media (min-width: 1117px) {
+    width: 48.65%;
+    height: 48.18%;
   }
 `;
 

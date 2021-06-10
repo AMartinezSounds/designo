@@ -1,33 +1,34 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-    html{
-        font-size: 62.5%;
-    }
     body {
         font-family: 'Jost', sans-serif;
         color: white;
         overflow-x: hidden;
+        font-size: 1rem;
+        font-weight: 200;
     }
     ul {
+        list-style: none;
+    }
+    nav {
         list-style: none;
     }
     a {
         text-decoration: none;
         color: black;
+        font-size: .95rem;
     }
     h1 {
-        font-size: 4.5rem;
+        font-size: 2rem;
     }
     p {
-        font-size: 1.5rem;
-        font-weight: 200;
+        font-size: 1rem;
     }
     .button {
-        font-size: 1.6rem;
+        font-size: 1rem;
         text-transform: uppercase;
-        height: 56px;
-        width: 152px;
+        padding: 1.6rem 1rem;
         background-color: white;
         border-radius: 5px;
         border: none;
@@ -36,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
+        font-weight: 500;
     }
     .button:hover{
         background-color: #FFAD9B; 

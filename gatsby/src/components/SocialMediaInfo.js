@@ -8,7 +8,7 @@ import pinterestIcon from '../../public/static/icons/icon-pinterest.svg';
 import instagramIcon from '../../public/static/icons/icon-instagram.svg';
 
 const SocialMediaStyles = styled.div`
-  display: none;
+  /* display: none;
   @media (max-width: 700px) {
     display: flex;
     justify-content: center;
@@ -19,13 +19,13 @@ const SocialMediaStyles = styled.div`
     img {
       margin-left: 0;
     }
-  }
+  } */
 `;
 
 function SocialMediaInfo() {
   return (
     <SocialMediaStyles>
-      <a
+      {/* <a
         rel="noreferrer"
         target="_blank"
         href="https://www.facebook.com/alfredo.martinezcanos/"
@@ -43,7 +43,7 @@ function SocialMediaInfo() {
       </a>
       <a href="https://www.instagram.com" rel="noreferrer" target="_blank">
         <img src={instagramIcon} alt="instagram icon" />
-      </a>
+      </a> */}
     </SocialMediaStyles>
   );
 }

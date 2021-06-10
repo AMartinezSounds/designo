@@ -4,22 +4,48 @@ import styled from 'styled-components';
 import bg from '../../public/static/home/illustrations/bg-pattern-small-circle.svg';
 
 const CharacteristicsComponentStyles = styled.div`
-  color: black;
+  margin-inline: auto;
+  width: 87.2%;
+  height: 33.33%;
   background: url(${bg});
   background-repeat: no-repeat;
   background-position: center top;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  height: 100%;
-  .center-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  h2 {
+    letter-spacing: 0.1rem;
   }
-  img {
+  p {
+    line-height: 1.5rem;
+  }
+  @media (min-width: 769px) {
+    background-position: center left;
+    flex-direction: row;
+    justify-content: space-between;
+    .center-text {
+      text-align: left;
+      width: 63.72%;
+    }
+  }
+  @media (min-width: 1440px) {
+    background-position: center top;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 31.53%;
+    .center-text {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  /* 
+  height: 100%;
+   */
+  /* img {
     width: 50%;
   }
   h2 {
@@ -44,7 +70,7 @@ const CharacteristicsComponentStyles = styled.div`
     width: 412px;
     flex-direction: column;
     background-position: center top;
-  }
+  } */
 `;
 
 function CharacteristicsComponent({ title, description, image }) {

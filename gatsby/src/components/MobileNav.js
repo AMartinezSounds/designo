@@ -6,7 +6,7 @@ const MobileNavStyles = styled.nav`
   position: absolute;
   height: 235px;
   transition: top 0.3s ease;
-  top: ${(props) => (props.show === 'false' ? '-22.5rem' : '10rem')};
+  top: ${(props) => (props.show === 'false' ? '-22.5rem' : '13.2%')};
   left: 0;
   right: 0;
   margin-top: -1rem;
@@ -17,9 +17,33 @@ const MobileNavStyles = styled.nav`
     flex-direction: column;
     justify-content: space-evenly;
   }
+  li {
+    position: relative;
+  }
+  li::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 1px;
+    width: 0;
+    top: 22px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  li:hover {
+    &:first-child::after {
+      width: 153px;
+    }
+    &:nth-child(2)::after {
+      width: 119px;
+    }
+    &:nth-child(3)::after {
+      width: 97px;
+    }
+  }
   a {
     color: white;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 300;
   }
   .show {

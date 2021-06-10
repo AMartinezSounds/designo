@@ -4,23 +4,37 @@ import styled from 'styled-components';
 import logoWhite from '../../public/static/logo-light.png';
 
 const LogoStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20%;
   img {
     width: 202.27px;
-    height: 27px;
+  }
+  @media (min-width: 769px) {
+    width: 60%;
+    align-items: flex-start;
   }
 `;
 
 const FooterNavStyles = styled.nav`
+  height: 40%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  height: 27px;
-  font-size: 1.6rem;
-  font-weight: 200;
-  max-width: 111.1rem;
-  a {
-    color: white;
+  justify-content: space-evenly;
+  li {
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
+  @media (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   li {
     position: relative;
   }
@@ -35,49 +49,18 @@ const FooterNavStyles = styled.nav`
     transition: width 0.3s ease;
   }
   li:hover {
-    &:first-child::after {
-      width: 122px;
-    }
     &:nth-child(2)::after {
-      width: 95px;
+      width: 113px;
     }
     &:nth-child(3)::after {
-      width: 80px;
+      width: 88px;
+    }
+    &:nth-child(4)::after {
+      width: 75px;
     }
   }
   .logo:hover {
     border-bottom: none;
-  }
-  @media (max-width: 700px) {
-    flex-direction: column;
-    max-width: none;
-  }
-`;
-
-const NavBarLinks = styled.div`
-  ul {
-    display: flex;
-    max-width: 370px;
-    li {
-      margin-left: 2.5rem;
-    }
-  }
-  @media (max-width: 700px) {
-    width: 100%;
-    ul {
-      border-top: 1px solid rgba(128, 128, 128, 0.4);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      max-width: none;
-      height: 187px;
-      li {
-        width: 100%;
-        margin-left: -4rem;
-        text-align: center;
-      }
-    }
   }
 `;
 
@@ -89,19 +72,15 @@ function FooterNav() {
           <img src={logoWhite} alt="logo" />
         </Link>
       </LogoStyles>
-      <NavBarLinks>
-        <ul>
-          <li>
-            <Link to="/about">OUR COMPANY</Link>
-          </li>
-          <li>
-            <Link to="/locations">LOCATIONS</Link>
-          </li>
-          <li>
-            <Link to="/contact">CONTACT</Link>
-          </li>
-        </ul>
-      </NavBarLinks>
+      <li>
+        <Link to="/about">OUR COMPANY</Link>
+      </li>
+      <li>
+        <Link to="/locations">LOCATIONS</Link>
+      </li>
+      <li>
+        <Link to="/contact">CONTACT</Link>
+      </li>
     </FooterNavStyles>
   );
 }

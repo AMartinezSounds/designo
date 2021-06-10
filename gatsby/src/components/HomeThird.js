@@ -7,27 +7,21 @@ import passionate from '../../public/static/home/illustrations/illustration-pass
 import resourceful from '../../public/static/home/illustrations/illustration-resourceful.svg';
 
 const HomeThirdStyles = styled.div`
+  margin-inline: auto;
+  width: 89.6%;
+  height: 166.8vh;
   display: flex;
-  align-items: center;
-  width: 1111px;
-  height: 412px;
-
-  @media (max-width: 1150px) {
-    width: min(90%, 900px);
-    margin-inline: auto;
+  flex-direction: column;
+  row-gap: 53.34px;
+  margin-bottom: 80px;
+  @media (min-width: 769px) {
+    height: 87vh;
+    justify-content: space-around;
   }
-  @media (max-width: 945px) {
-    flex-direction: column;
-    height: 100%;
-    margin-top: -2rem;
-    justify-content: center;
-    width: 689px;
-  }
-  @media (max-width: 689px) {
-    width: 500px;
-  }
-  @media (max-width: 414px) {
-    width: 414px;
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    width: 77.16%;
+    height: 28.61%;
   }
 `;
 

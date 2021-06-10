@@ -6,87 +6,71 @@ import phone from '../../public/static/home/image-hero-phone.png';
 
 const HomeFirstStyles = styled.div`
   background: url(${bg}) no-repeat;
-  background-position: right;
-  max-width: 1111px;
-  border-radius: 20px;
+  background-position: center right;
   background-color: #e78168;
-  height: 640px;
+  height: 843px;
+  margin-inline: auto;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  @media (max-width: 1150px) {
-    max-width: 900px;
-    margin-inline: auto;
+  @media (min-width: 501px) {
+    width: 89.6%;
+    border-radius: 20px;
   }
-  @media (max-width: 945px) {
-    flex-direction: column;
-    margin-inline: auto;
-    height: 100%;
-    width: 689px;
-    text-align: center;
-  }
-  @media (max-width: 689px) {
-    max-width: 500px;
-  }
-  @media (max-width: 414px) {
-    max-width: 414px;
-    border-radius: 0;
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 77.15%;
+    height: 640px;
   }
 `;
 
 const HomeFirstText = styled.div`
-  width: 540px;
+  margin-top: 3rem;
+  width: 87.2%;
+  height: 37.01%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
   p {
-    line-height: 2.5rem;
+    line-height: 1.5rem;
   }
-  @media (max-width: 945px) {
-    align-items: center;
-    height: 50%;
-    justify-content: space-around;
+  .button {
+    max-width: 46.48%;
+    max-height: 18%;
+    z-index: 2;
   }
-  @media (max-width: 689px) {
+  @media (min-width: 769px) {
     h1 {
-      width: 90%;
+      font-size: 3rem;
     }
     p {
-      width: 80%;
+      width: 77.66%;
     }
   }
-  @media (max-width: 414px) {
+  @media (min-width: 1440px) {
+    width: 47%;
+    height: 54.69%;
+    align-items: flex-start;
+    text-align: left;
+    justify-self: flex-end;
     h1 {
-      max-width: 414px;
-      font-size: 3.5rem;
+      font-size: 2.39rem;
     }
-    .button {
-      margin-top: 4rem;
+    p {
+      font-size: 0.9rem;
     }
   }
 `;
 
 const HomeFirstImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 30%;
-  max-height: 640px;
+  height: 573px;
   overflow: hidden;
-  img {
-    object-fit: contain;
-  }
-  @media (max-width: 945px) {
-    width: 100%;
-    height: 50%;
-    img {
-      width: 90%;
-    }
-  }
-  @media (max-width: 414px) {
-    img {
-      width: 600px;
-    }
+  @media (min-width: 1440px) {
+    max-width: 46.8%;
+    height: 100%;
   }
 `;
 
