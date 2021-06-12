@@ -6,12 +6,19 @@ import { FaTimes } from 'react-icons/fa';
 import logo from '../../public/static/logo-dark.png';
 
 const NavStyles = styled.nav`
+  font-family: 'Jost', sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
   margin-inline: auto;
   width: 89.6%;
   height: 11.47vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  a {
+    text-decoration: none;
+    color: black;
+  }
   li {
     display: none;
   }

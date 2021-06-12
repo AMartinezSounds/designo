@@ -5,6 +5,7 @@ import bg from '../../public/static/home/bg-pattern-call-to-action.svg';
 
 const GetInTouchStyles = styled.div`
   background: url(${bg}) no-repeat;
+  background-size: cover;
   background-position: center;
   z-index: 2;
   border-radius: 20px;
@@ -23,6 +24,9 @@ const GetInTouchStyles = styled.div`
   @media (min-width: 769px) {
     grid-row-start: 1;
     grid-row-end: 8;
+  }
+  @media (min-width: 1000px) {
+    background-position: right;
   }
   @media (min-width: 1440px) {
     flex-direction: row;
@@ -71,7 +75,9 @@ function GetInTouch() {
         </p>
       </GetInTouchTextStyles>
       <GetInTouchButtonStyles>
-        <Link className="button">GET IN TOUCH</Link>
+        <Link to="/contact" className="button">
+          GET IN TOUCH
+        </Link>
       </GetInTouchButtonStyles>
     </GetInTouchStyles>
   );

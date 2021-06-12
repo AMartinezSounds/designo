@@ -6,6 +6,7 @@ import FooterNav from './FooterNav';
 
 const FooterStyles = styled.footer`
   background-color: black;
+  font-family: 'Jost', sans-serif;
   height: 815px;
   grid-row-start: 3;
   grid-row-end: 12;
@@ -23,6 +24,8 @@ const FooterStyles = styled.footer`
     grid-row-start: 5;
     grid-row-end: 12;
     height: 100%;
+  }
+  @media (min-width: 1440px) {
   }
 `;
 

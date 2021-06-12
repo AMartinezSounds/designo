@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const MobileNavStyles = styled.nav`
+  font-family: 'Jost', sans-serif;
   position: absolute;
   height: 235px;
   transition: top 0.3s ease;
@@ -45,6 +46,7 @@ const MobileNavStyles = styled.nav`
     color: white;
     font-size: 1.3rem;
     font-weight: 300;
+    text-decoration: none;
   }
   .show {
     top: 10rem;

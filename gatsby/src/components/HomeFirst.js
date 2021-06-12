@@ -17,6 +17,7 @@ const HomeFirstStyles = styled.div`
   @media (min-width: 501px) {
     width: 89.6%;
     border-radius: 20px;
+    height: 640px;
   }
   @media (min-width: 1440px) {
     flex-direction: row;
